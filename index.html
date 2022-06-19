@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Deacode - Template HTML Basic</title>
+  </head>
+  <body>
+    <section id="home">
+      <div class="container">
+        <!-- navigation bar start -->
+        <div class="navwrapper">
+          <ul class="navigation">
+            <li class="nav">
+              <a href="#home" class="navlink">HOME</a>
+            </li>
+            <li class="nav">
+              <a href="#start" class="navlink">START</a>
+            </li>
+            <li class="nav">
+              <a href="#reward" class="navlink">REWARD</a>
+            </li>
+            <li class="nav">
+              <p id="profil"></p>
+            </li>
+            <li class="nav">
+              <p id="score"></p>
+            </li>
+            <li class="nav">
+              <p id="Duit"></p>
+            </li>
+          </ul>
+        </div>
+        <div class="contentwrapper">
+          <div class="title" id="title">Register Here</div>
+          <div id="registerForm">
+            <input type="text" placeholder="username" id="username" />
+            <input type="text" placeholder="Top Up" id="TopUp" />
+            <button onclick="register()">Register</button>
+          </div>
+          <button onclick="logout()" id="logoutForm">Logout</button>
+          <div class="Level">
+            <li class="nav">
+              <a id="Level1" class="navlink" onclick="levl1()">Level 1 RP.10000</a>
+            </li>
+            <li class="nav">
+              <a id="Level2" class="navlink" onclick="levl2()">Level 2 RP.20000</a>
+            </li>
+            <li class="nav">
+              <a id="Level3" class="navlink" onclick="levl3()">Level 3 RP 25000</a>
+            </li>
+              <p id="a">Convert 10000 point = 100Rp</p>
+              <button onclick="convert()">Convert</button>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id="start">
+      <div class="container red">
+        <div class="gamewrapper">
+          <div class="box" id="box1"></div>
+          <div class="box" id="box2"></div>
+          <div class="box" id="box3"></div>
+          <div class="box" id="box4"></div>
+          <div class="box" id="box5"></div>
+        </div>
+        <div class="buttonwrapper">
+          <button onclick="start1()" class="startButton" id="mulai1">START</button>
+        </div>
+        <div class="buttonwrapper">
+          <button onclick="start2()" class="startButton" id="mulai2">START</button>
+        </div>
+        <div class="buttonwrapper">
+          <button onclick="start3()" class="startButton" id="mulai3">START</button>
+        </div>
+        <div class="buttonwrapper">
+          <button onclick="finish1()" class="startButton" id="stop1">STOP</button>
+          <button onclick="finish2()" class="startButton" id="stop2">STOP</button>
+          <button onclick="finish3()" class="startButton" id="stop3">STOP</button>
+          <p id="notif">Anda kalah</p>
+        </div>
+      </div>
+    </section>
+    <section id="reward">
+      <div class="container blue">
+        <div class="contentwrapper" id="imgReward"> 
+          <h1>REWARD BUAT ANDA</h1>
+        </div>
+      </div>
+    </section>
+    <div class="top" id="top" onclick="directing()">☝</div>
+    <script>
+      function directing(){
+        location.href = "#home"
+      }
+    </script>
+    <script src="module/Player.js"></script>
+    <script src="module/role.js"></script>
+    <script src="module/Money.js"></script>
+    <script src="Rewerd.json"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <script src="init.js"></script>
+  </body>
+</html>
