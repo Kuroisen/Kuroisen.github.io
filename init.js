@@ -109,18 +109,22 @@ function reward() {
 
 function winner1() {
   if (box1.textContent == box2.textContent && box1.textContent == box3.textContent) {
-    Duit.textContent = "Uang anda RP." + Uang
-    // console.log('win')
-    tot_Bonus = 100 * bonus
-    pointAkun = pointAkun + 100 + tot_Bonus
     let Uang = sessionStorage.getItem('uang')
     Uang = parseInt(Uang)
     Uang = Uang + 20000
+    Duit.textContent = "Uang anda RP." + Uang
+    
+    // console.log('win')
+    tot_Bonus = 100 * bonus
+    pointAkun = pointAkun + 100 + tot_Bonus
+
     sessionStorage.setItem('point', pointAkun)
     sessionStorage.setItem('uang',Uang)
     let akunPoint = sessionStorage.getItem('point')
     point.textContent = "point : " + pointAkun
+
     reward()
+
     location.href = "#reward"
   } else {
     // console.log('lose')
